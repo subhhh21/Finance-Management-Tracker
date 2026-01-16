@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Pro | Smart Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Finance Pro</h2>
+            <p>Track your wealth, grow your future.</p>
+        </header>
+        
+        <div class="balance-card">
+            <h4>Total Balance</h4>
+            <h1 id="balance">₹0.00</h1>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <h4>INCOME</h4>
+                <p id="money-plus" class="money plus">+₹0.00</p>
+            </div>
+            <div class="stat-box">
+                <h4>EXPENSES</h4>
+                <p id="money-minus" class="money minus">-₹0.00</p>
+            </div>
+        </div>
+
+        <div class="history-header">
+            <h3 class="history-title">Recent Transactions</h3>
+            <button onclick="clearAll()" class="clear-btn">
+                <i class="fa-solid fa-eraser"></i> Clear All
+            </button>
+        </div>
+
+        <ul id="list" class="list"></ul>
+
+        <div class="form-container">
+            <h3>Add Transaction</h3>
+            <form id="form">
+                <div class="form-control">
+                    <input type="text" id="text" placeholder="Entry name (e.g. Salary, Rent)" required />
+                </div>
+                <div class="form-control">
+                    <input type="number" id="amount" placeholder="Amount (negative - exp, positive - inc)" required />
+                </div>
+                <button type="submit" class="btn">Confirm Transaction</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
